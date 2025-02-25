@@ -20,6 +20,24 @@ import java.util.Map;
 import org.json.JSONObject;
 import org.json.JSONArray;
 
+/**
+ * REST controller for handling DNA and genetic data analysis requests.
+ * 
+ * <p>This controller provides endpoints to analyze DNA sequences and genetic 
+ * data files uploaded by users. It supports multiple processing options, such 
+ * as reversing DNA sequences, finding codons, analyzing high coverage regions, 
+ * and more. The results can be formatted as plain text, JSON, or CSV.</p>
+ * 
+ * <p>Endpoints:</p>
+ * <ul>
+ *   <li><b>POST /api/analyze</b> - Analyzes a DNA sequence file with various options.</li>
+ *   <li><b>POST /api/analyze-genetic</b> - Processes genetic data files and optionally performs SNP analysis.</li>
+ * </ul>
+ * 
+ * <p>Handles file validation, error responses, and formatted output generation.</p>
+ * 
+ * <p>Cross-origin requests are allowed.</p>
+ */
 @RestController
 @RequestMapping("/api")
 @CrossOrigin(origins = "*")
